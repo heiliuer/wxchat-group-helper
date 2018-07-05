@@ -58,6 +58,7 @@ def log_user(user_name):
         modified.write(user_name + "\n" + data)
 
 
+#itchat.auto_login(hotReload=True, enableCmdQR=True)
 itchat.auto_login(hotReload=True)
 
 itchat.run(True)
