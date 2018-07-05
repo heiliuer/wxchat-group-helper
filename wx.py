@@ -40,6 +40,7 @@ def on_reply_invite(msg):
             useInvitation=False
         )
         itchat.send_msg(u'感谢关注Taro，正在火速拉你入群！', msg['FromUserName'])
+        # itchat.send_raw_msg(49, chat_room_name, msg['FromUserName'])
 
 
 # 获取群聊ID
