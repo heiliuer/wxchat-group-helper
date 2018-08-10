@@ -1,4 +1,4 @@
 .idea
 itchat.pkl
-user.txt
+dist/
 *.iml

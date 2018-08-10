@@ -1,12 +1,15 @@
-# cd project
-# python3 -m venv venv
-# . venv/bin/activate
-# pip install itchat
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import itchat
 from itchat.content import *
+import os
 
 # 群名称
 chat_room_name = 'Taro 开发交流 2⃣️ 群'
+picDir = 'dist/'
+if not os.path.exists(picDir):
+    os.makedirs(picDir)
 
 
 # 添加好友并邀请进群
@@ -47,7 +50,7 @@ def get_group_id(group_name):
 
 
 def log_user(user_name):
-    filename = 'user.txt'
+    filename = os.path.join(picDir, 'user.txt')
     open(filename, 'a')
     with open(filename, 'r') as original:
         data = original.read()
@@ -55,6 +58,7 @@ def log_user(user_name):
         modified.write(user_name + "\n" + data)
 
 
-itchat.auto_login(hotReload=True)
+# itchat.auto_login(hotReload=True)
+itchat.auto_login(hotReload=True, picDir=os.path.join(picDir, 'qrcode.png'))
 
 itchat.run(True)
