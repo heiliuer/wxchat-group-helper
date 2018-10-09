@@ -6,7 +6,7 @@ from itchat.content import *
 import os
 
 # 群名称
-chat_room_name = 'Taro 开发交流 2⃣️ 群'
+chat_room_name = 'Taro 开发交流 5️⃣ 群'
 picDir = 'dist/'
 if not os.path.exists(picDir):
     os.makedirs(picDir)
